@@ -30,14 +30,13 @@ The extension adds an ALT text generator to TYPO3 image references, provides a b
 
 ## Installation
 
-This package is currently installed from GitHub via Composer VCS.
+Install the extension directly from Packagist:
 
 ```bash
-composer config repositories.barrierefrei-space vcs https://github.com/barrierefreispace/alt-text-gen
 composer require barrierefrei-space/alt-text-gen
 ```
 
-For tagged releases, require a semver constraint after adding the VCS repository:
+To require a specific release line:
 
 ```bash
 composer require barrierefrei-space/alt-text-gen:^1.0
@@ -155,10 +154,10 @@ An upgrade wizard migrates legacy list type values to the current CType:
 
 ### Composer cannot find the package
 
-Make sure the VCS repository is configured before running `composer require`.
+Make sure the package name is spelled correctly and Packagist is enabled in your Composer configuration.
 
 ```bash
-composer config repositories.barrierefrei-space vcs https://github.com/barrierefreispace/alt-text-gen
+composer require barrierefrei-space/alt-text-gen
 ```
 
 ### Site URL is wrong
