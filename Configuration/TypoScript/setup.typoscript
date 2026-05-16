@@ -1,0 +1,9 @@
+plugin.tx_barrierefreispace_donationwidget {
+  view {
+    templateRootPaths.0 = EXT:barrierefrei_space/Resources/Private/Templates/
+    partialRootPaths.0 = EXT:barrierefrei_space/Resources/Private/Partials/
+    layoutRootPaths.0 = EXT:barrierefrei_space/Resources/Private/Layouts/
+  }
+}
+
+page.includeCSS.barrierefreiSpaceDonationWidget = EXT:barrierefrei_space/Resources/Public/Css/donation-widget.css

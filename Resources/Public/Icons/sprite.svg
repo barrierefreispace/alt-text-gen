@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="tx-barrierefrei-space-generate" viewBox="0 0 16 16">
+    <path d="M2 13.5h12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M4 11.2l5.8-5.8 1.8 1.8L5.8 13H4v-1.8z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+    <path d="M10.3 4.7l1-1a1 1 0 0 1 1.4 0l.6.6a1 1 0 0 1 0 1.4l-1 1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="tx-barrierefrei-space-wand" viewBox="0 0 16 16">
+    <path d="M3 13l6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M8.9 3.6l1.1-.5.5-1.1.5 1.1 1.1.5-1.1.5-.5 1.1-.5-1.1z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+    <path d="M12.8 7.3l.6-.2.2-.6.2.6.6.2-.6.2-.2.6-.2-.6z" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
+  </symbol>
+</svg>

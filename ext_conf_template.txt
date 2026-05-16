@@ -1,0 +1,4 @@
+# AI Server URL setting is hidden; the extension now uses https://alt-text-api-647809240796.europe-west3.run.app by default.
+
+# cat=basic; type=string; label=License Key
+licenseKey =

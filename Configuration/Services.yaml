@@ -1,0 +1,15 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  BarrierefreiSpace\:
+    resource: '../Classes/*'
+
+  BarrierefreiSpace\EventListener\BackendAssetsListener:
+    tags:
+      - name: event.listener
+        identifier: 'barrierefrei_space/backend-assets'
+        event: TYPO3\CMS\Backend\Controller\Event\BeforeBackendPageRenderEvent
+

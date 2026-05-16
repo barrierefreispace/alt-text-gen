@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2026-04-29T00:00:00Z" product-name="barrierefrei_space">
+    <header/>
+    <body>
+      <trans-unit id="subscription.module.title" xml:space="preserve">
+        <source>ALT Text Generator - Subscription Center</source>
+      </trans-unit>
+      <trans-unit id="subscription.siteUrl.label" xml:space="preserve">
+        <source>Site URL:</source>
+      </trans-unit>
+      <trans-unit id="subscription.siteUrl.notResolved" xml:space="preserve">
+        <source>Site URL could not be resolved from TYPO3 site configuration.</source>
+      </trans-unit>
+      <trans-unit id="subscription.refreshStatus" xml:space="preserve">
+        <source>Refresh Status</source>
+      </trans-unit>
+      <trans-unit id="subscription.action.processing" xml:space="preserve">
+        <source>Processing...</source>
+      </trans-unit>
+      <trans-unit id="subscription.website.open" xml:space="preserve">
+        <source>Visit us</source>
+      </trans-unit>
+      <trans-unit id="subscription.brand.tagline" xml:space="preserve">
+        <source>An AI accessibility tool by Veritium GmbH</source>
+      </trans-unit>
+      <trans-unit id="subscription.hero.copy" xml:space="preserve">
+        <source>Manage accessible image description credits, license status, and billing for this TYPO3 site.</source>
+      </trans-unit>
+      <trans-unit id="subscription.section.status" xml:space="preserve">
+        <source>Status</source>
+      </trans-unit>
+      <trans-unit id="subscription.section.included" xml:space="preserve">
+        <source>Included</source>
+      </trans-unit>
+      <trans-unit id="subscription.section.setup" xml:space="preserve">
+        <source>Setup</source>
+      </trans-unit>
+      <trans-unit id="subscription.section.choose" xml:space="preserve">
+        <source>Choose</source>
+      </trans-unit>
+      <trans-unit id="subscription.section.audit" xml:space="preserve">
+        <source>Audit</source>
+      </trans-unit>
+      <trans-unit id="subscription.sidePanel.label" xml:space="preserve">
+        <source>License and free usage</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.open" xml:space="preserve">
+        <source>Open subscription guide</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.close" xml:space="preserve">
+        <source>Close subscription guide</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.eyebrow" xml:space="preserve">
+        <source>Quick orientation</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.title" xml:space="preserve">
+        <source>Set up your accessibility credits</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.intro" xml:space="preserve">
+        <source>This guide appears the first time you open the subscription center. You can reopen it anytime with the question mark icon.</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.step.site.title" xml:space="preserve">
+        <source>Check the bound site</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.step.site.body" xml:space="preserve">
+        <source>The site URL is resolved from the current TYPO3 site configuration and cannot be edited in Extension Configuration.</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.step.status.title" xml:space="preserve">
+        <source>Read subscription status</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.step.status.body" xml:space="preserve">
+        <source>The status panel shows the active plan, used quota, remaining credits, bonus credits, billing period, and last synchronization.</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.step.license.title" xml:space="preserve">
+        <source>Copy and configure the license key</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.step.license.body" xml:space="preserve">
+        <source>After checkout, copy the latest license key and paste it into the extension configuration. Then refresh the status.</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.step.plans.title" xml:space="preserve">
+        <source>Choose plans and review history</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.step.plans.body" xml:space="preserve">
+        <source>Use plan cards to subscribe, buy top-ups, or open the billing portal. The status timeline records recent license changes.</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.skip" xml:space="preserve">
+        <source>Skip guide</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.previous" xml:space="preserve">
+        <source>Back</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.next" xml:space="preserve">
+        <source>Next</source>
+      </trans-unit>
+      <trans-unit id="subscription.guide.finish" xml:space="preserve">
+        <source>Finish</source>
+      </trans-unit>
+      <trans-unit id="subscription.freeUsage.title" xml:space="preserve">
+        <source>Free Usage</source>
+      </trans-unit>
+      <trans-unit id="subscription.freeUsage.total" xml:space="preserve">
+        <source>Total Free Quota:</source>
+      </trans-unit>
+      <trans-unit id="subscription.freeUsage.used" xml:space="preserve">
+        <source>Used:</source>
+      </trans-unit>
+      <trans-unit id="subscription.freeUsage.remaining" xml:space="preserve">
+        <source>Remaining:</source>
+      </trans-unit>
+      <trans-unit id="subscription.freeUsage.required" xml:space="preserve">
+        <source>Subscription Required</source>
+      </trans-unit>
+      <trans-unit id="subscription.freeUsage.exhaustedHint" xml:space="preserve">
+        <source>The 5 free usages are exhausted. Please subscribe to continue.</source>
+      </trans-unit>
+      <trans-unit id="subscription.freeUsage.defaultHint" xml:space="preserve">
+        <source>Each site has 5 free usages after installation, then subscription is required.</source>
+      </trans-unit>
+      <trans-unit id="subscription.paymentLink.ready" xml:space="preserve">
+        <source>Payment link is ready, open it in a new tab.</source>
+      </trans-unit>
+      <trans-unit id="subscription.paymentLink.openCheckout" xml:space="preserve">
+        <source>Open Stripe Checkout</source>
+      </trans-unit>
+      <trans-unit id="subscription.portalLink.ready" xml:space="preserve">
+        <source>Billing portal link is ready.</source>
+      </trans-unit>
+      <trans-unit id="subscription.portalLink.openPortal" xml:space="preserve">
+        <source>Open Billing Portal</source>
+      </trans-unit>
+      <trans-unit id="subscription.license.title" xml:space="preserve">
+        <source>License Key</source>
+      </trans-unit>
+      <trans-unit id="subscription.license.latest" xml:space="preserve">
+        <source>Latest License Key:</source>
+      </trans-unit>
+      <trans-unit id="subscription.license.copyLatest" xml:space="preserve">
+        <source>Copy Latest Key</source>
+      </trans-unit>
+      <trans-unit id="subscription.license.copy.success" xml:space="preserve">
+        <source>Copied</source>
+      </trans-unit>
+      <trans-unit id="subscription.license.copy.failed" xml:space="preserve">
+        <source>Copy failed, please copy manually</source>
+      </trans-unit>
+      <trans-unit id="subscription.license.copy.prompt" xml:space="preserve">
+        <source>Please copy license key manually</source>
+      </trans-unit>
+      <trans-unit id="subscription.license.notFound" xml:space="preserve">
+        <source>No recent license found for this site.</source>
+      </trans-unit>
+      <trans-unit id="subscription.license.configured" xml:space="preserve">
+        <source>Configured Key:</source>
+      </trans-unit>
+      <trans-unit id="subscription.license.hint" xml:space="preserve">
+        <source>Paste latest key into extension config "licenseKey" and save.</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.title" xml:space="preserve">
+        <source>Current Subscription</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.status" xml:space="preserve">
+        <source>Status:</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.plan" xml:space="preserve">
+        <source>Plan:</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.quota" xml:space="preserve">
+        <source>Quota:</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.bonus" xml:space="preserve">
+        <source>Bonus Credits:</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.remaining" xml:space="preserve">
+        <source>Remaining:</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.donationScope" xml:space="preserve">
+        <source>Donation Scope:</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.donationScope.value" xml:space="preserve">
+        <source>Includes top-up purchases</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.boundSite" xml:space="preserve">
+        <source>Bound Site:</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.periodEnd" xml:space="preserve">
+        <source>Current Period End:</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.cancellation" xml:space="preserve">
+        <source>Cancellation:</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.cancellation.scheduled" xml:space="preserve">
+        <source>scheduled at period end</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.canceledAt" xml:space="preserve">
+        <source>Canceled At:</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.lastSynced" xml:space="preserve">
+        <source>Last Synced:</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.subscriptionId" xml:space="preserve">
+        <source>Subscription ID:</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.notAvailable" xml:space="preserve">
+        <source>Subscription status not available yet.</source>
+      </trans-unit>
+      <trans-unit id="subscription.current.emptyHint" xml:space="preserve">
+        <source>Choose a plan below, then copy the license key into the extension configuration.</source>
+      </trans-unit>
+      <trans-unit id="subscription.quickGuide.title" xml:space="preserve">
+        <source>Quick Guide</source>
+      </trans-unit>
+      <trans-unit id="subscription.quickGuide.content" xml:space="preserve">
+        <source>1) Copy License Key after purchase. 2) Paste it into extension configuration and save. 3) Click refresh status. 4) To cancel, click "Cancel Subscription" on current plan card.</source>
+      </trans-unit>
+      <trans-unit id="subscription.timeline.title" xml:space="preserve">
+        <source>Status Timeline</source>
+      </trans-unit>
+      <trans-unit id="subscription.timeline.pagination" xml:space="preserve">
+        <source>Status timeline pagination</source>
+      </trans-unit>
+      <trans-unit id="subscription.timeline.previous" xml:space="preserve">
+        <source>Previous</source>
+      </trans-unit>
+      <trans-unit id="subscription.timeline.next" xml:space="preserve">
+        <source>Next</source>
+      </trans-unit>
+      <trans-unit id="subscription.timeline.page" xml:space="preserve">
+        <source>Page</source>
+      </trans-unit>
+      <trans-unit id="subscription.plans.title" xml:space="preserve">
+        <source>Plans</source>
+      </trans-unit>
+      <trans-unit id="subscription.plans.currentPlan" xml:space="preserve">
+        <source>Current Plan</source>
+      </trans-unit>
+      <trans-unit id="subscription.plans.oneTimeExtra" xml:space="preserve">
+        <source>One-time extra usages:</source>
+      </trans-unit>
+      <trans-unit id="subscription.plans.monthlyIncluded" xml:space="preserve">
+        <source>Monthly included usages:</source>
+      </trans-unit>
+      <trans-unit id="subscription.plans.buyOnce" xml:space="preserve">
+        <source>Buy Once</source>
+      </trans-unit>
+      <trans-unit id="subscription.plans.notConfigured" xml:space="preserve">
+        <source>Not configured</source>
+      </trans-unit>
+      <trans-unit id="subscription.plans.cancelSubscription" xml:space="preserve">
+        <source>Cancel Subscription</source>
+      </trans-unit>
+      <trans-unit id="subscription.plans.singleSubscriptionMode" xml:space="preserve">
+        <source>Single subscription mode</source>
+      </trans-unit>
+      <trans-unit id="subscription.plans.unavailableWhileSubscribed" xml:space="preserve">
+        <source>Unavailable While Subscribed</source>
+      </trans-unit>
+      <trans-unit id="subscription.plans.subscribe" xml:space="preserve">
+        <source>Subscribe</source>
+      </trans-unit>
+      <trans-unit id="subscription.plans.modeHint" xml:space="preserve">
+        <source>One active subscription per site. Top-ups can be added whenever a license is configured.</source>
+      </trans-unit>
+      <trans-unit id="subscription.customNeeds.title" xml:space="preserve">
+        <source>Need a different subscription setup?</source>
+      </trans-unit>
+      <trans-unit id="subscription.customNeeds.body" xml:space="preserve">
+        <source>If you have other subscription needs, please contact us.</source>
+      </trans-unit>
+      <trans-unit id="subscription.customNeeds.button" xml:space="preserve">
+        <source>Open subscription request</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.plansLoadFailed" xml:space="preserve">
+        <source>Unable to load plans, please check Python server connectivity.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.freeQuotaExhausted" xml:space="preserve">
+        <source>Free quota is exhausted, please subscribe to continue.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.licenseStatusQueryFailed" xml:space="preserve">
+        <source>License key is configured, but status query failed.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.siteLatestLicenseQueryFailed" xml:space="preserve">
+        <source>Latest site license query failed.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.siteTrialStatusQueryFailed" xml:space="preserve">
+        <source>Free usage status query failed.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.alreadySubscribedOtherBlocked" xml:space="preserve">
+        <source>Existing subscription detected. Please cancel current subscription before subscribing another plan.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.needLicenseForTopup" xml:space="preserve">
+        <source>Please set License Key before purchasing extra credits.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.topupOpenInNewTab" xml:space="preserve">
+        <source>Please open the one-time top-up checkout in a new tab.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.topupCreateFailed" xml:space="preserve">
+        <source>Failed to create top-up checkout link.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.singleSubscriptionBlocked" xml:space="preserve">
+        <source>Checkout blocked: single-subscription mode requires canceling current plan first.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.needLicenseForPortal" xml:space="preserve">
+        <source>Please set License Key in extension configuration before opening billing portal.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.usePortalForCancel" xml:space="preserve">
+        <source>Please use billing portal to cancel current plan.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.portalCreateFailed" xml:space="preserve">
+        <source>Failed to create billing portal link.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.checkoutOpenInNewTab" xml:space="preserve">
+        <source>Please open Stripe checkout in a new tab via the button below.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.paymentLinkEmpty" xml:space="preserve">
+        <source>Failed to create payment link: empty URL returned.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.paymentLinkCreateFailed" xml:space="preserve">
+        <source>Failed to create payment link, please verify server configuration.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.portalOpenInNewTab" xml:space="preserve">
+        <source>Please open subscription management in a new tab.</source>
+      </trans-unit>
+      <trans-unit id="subscription.message.detailPrefix" xml:space="preserve">
+        <source>Detail:</source>
+      </trans-unit>
+      <trans-unit id="button.generate" xml:space="preserve">
+        <source>Generate</source>
+      </trans-unit>
+      <trans-unit id="button.generating" xml:space="preserve">
+        <source>Generating…</source>
+      </trans-unit>
+      <trans-unit id="error.generic" xml:space="preserve">
+        <source>ALT generation failed.</source>
+      </trans-unit>
+      <trans-unit id="plugin.donationWidget.title" xml:space="preserve">
+        <source>Donation Widget</source>
+      </trans-unit>
+      <trans-unit id="plugin.donationWidget.description" xml:space="preserve">
+        <source>Displays the total amount donated to charity through this site's subscription.</source>
+      </trans-unit>
+      <trans-unit id="plugin.donationWidget.position.fixedBottomLeft" xml:space="preserve">
+        <source>Fixed bottom left</source>
+      </trans-unit>
+      <trans-unit id="plugin.donationWidget.position.fixedBottomRight" xml:space="preserve">
+        <source>Fixed bottom right</source>
+      </trans-unit>
+      <trans-unit id="plugin.donationWidget.ariaLabel" xml:space="preserve">
+        <source>Donation impact</source>
+      </trans-unit>
+      <trans-unit id="plugin.donationWidget.kicker" xml:space="preserve">
+        <source>Social impact</source>
+      </trans-unit>
+      <trans-unit id="plugin.donationWidget.headline" xml:space="preserve">
+        <source>This company supports accessible futures.</source>
+      </trans-unit>
+      <trans-unit id="plugin.donationWidget.copy" xml:space="preserve">
+        <source>A share of this subscription is donated to charitable work for inclusion and digital accessibility.</source>
+      </trans-unit>
+      <trans-unit id="plugin.donationWidget.total" xml:space="preserve">
+        <source>Donated to charity</source>
+      </trans-unit>
+      <trans-unit id="mlang_tabs_tab" xml:space="preserve">
+        <source>ALT Text Generator</source>
+      </trans-unit>
+      <trans-unit id="mlang_labels_tablabel" xml:space="preserve">
+        <source>Subscription Center</source>
+      </trans-unit>
+      <trans-unit id="mlang_labels_tabdescr" xml:space="preserve">
+        <source>Manage subscription plans and review license status.</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

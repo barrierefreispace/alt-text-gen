@@ -1,0 +1,464 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<f:layout name="Module" />
+
+<f:section name="Content">
+
+<div class="alttext-subscription-center">
+    <section class="atg-hero" aria-labelledby="atg-subscription-title">
+        <div class="atg-hero__brand">
+            <div class="atg-logo-mark" aria-hidden="true">
+                <img src="{logoUrl}" alt="" />
+            </div>
+            <div>
+                <p class="atg-eyebrow">barrierefrei.space</p>
+                <h1 id="atg-subscription-title">ALT Text Generator</h1>
+                <p class="atg-brand-line"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.brand.tagline" /></p>
+            </div>
+        </div>
+
+        <div class="atg-hero__content">
+            <p class="atg-hero-copy">
+                <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.hero.copy" />
+            </p>
+            <div class="atg-hero-actions">
+                <a class="atg-button atg-button--primary js-action-loading" href="{refreshUrl}" data-loading-label="{f:translate(key: 'LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.action.processing')}">
+                    <span aria-hidden="true">&#8635;</span>
+                    <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.refreshStatus" />
+                </a>
+                <a class="atg-button atg-button--secondary" href="https://www.barrierefrei.space/" target="_blank" rel="noopener noreferrer">
+                    <span aria-hidden="true">&#8599;</span>
+                    <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.website.open" />
+                </a>
+                <button
+                    class="atg-icon-button js-guide-open"
+                    type="button"
+                    aria-label="{f:translate(key: 'LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.open')}"
+                    title="{f:translate(key: 'LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.open')}"
+                >
+                    <span aria-hidden="true">?</span>
+                </button>
+                <f:if condition="{portalUrlToOpen}">
+                    <a class="atg-button atg-button--secondary" href="{portalUrlToOpen}" target="_blank" rel="noopener noreferrer">
+                        <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.portalLink.openPortal" />
+                    </a>
+                </f:if>
+            </div>
+        </div>
+    </section>
+
+    <div class="atg-site-strip">
+        <span class="atg-site-strip__label">
+            <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.siteUrl.label" />
+        </span>
+        <strong>
+            {siteUrl}
+        </strong>
+    </div>
+
+    <f:if condition="{messages}">
+        <div class="atg-alert atg-alert--warning" role="status">
+            <f:for each="{messages}" as="message">
+                <div>{message}</div>
+            </f:for>
+        </div>
+    </f:if>
+
+    <f:if condition="{paymentUrlToOpen}">
+        <div class="atg-alert atg-alert--success">
+            <div>
+                <strong><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.paymentLink.ready" /></strong>
+                <p><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.message.checkoutOpenInNewTab" /></p>
+            </div>
+            <a class="atg-button atg-button--primary" href="{paymentUrlToOpen}" target="_blank" rel="noopener noreferrer">
+                <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.paymentLink.openCheckout" />
+            </a>
+        </div>
+    </f:if>
+
+    <f:if condition="{portalUrlToOpen}">
+        <div class="atg-alert atg-alert--success">
+            <div>
+                <strong><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.portalLink.ready" /></strong>
+                <p><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.message.portalOpenInNewTab" /></p>
+            </div>
+            <a class="atg-button atg-button--primary" href="{portalUrlToOpen}" target="_blank" rel="noopener noreferrer">
+                <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.portalLink.openPortal" />
+            </a>
+        </div>
+    </f:if>
+
+    <div class="atg-dashboard">
+        <section class="atg-panel atg-panel--status" aria-labelledby="atg-current-subscription">
+            <div class="atg-panel__header">
+                <div>
+                    <p class="atg-section-label"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.section.status" /></p>
+                    <h2 id="atg-current-subscription">
+                        <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.current.title" />
+                    </h2>
+                </div>
+                <f:if condition="{licenseStatus}">
+                    <span class="atg-status atg-status--{licenseStatus.status_badge_class}">{licenseStatus.status}</span>
+                </f:if>
+            </div>
+
+            <f:if condition="{licenseStatus}">
+                <f:then>
+                    <div class="atg-meter-grid">
+                        <div class="atg-meter">
+                            <span><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.current.plan" /></span>
+                            <strong>{licenseStatus.plan_code}</strong>
+                        </div>
+                        <div class="atg-meter">
+                            <span><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.current.quota" /></span>
+                            <strong>{licenseStatus.used_this_period} / {licenseStatus.quota_monthly}</strong>
+                        </div>
+                        <div class="atg-meter">
+                            <span><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.current.remaining" /></span>
+                            <strong>{licenseStatus.total_remaining_quota}</strong>
+                        </div>
+                        <div class="atg-meter">
+                            <span><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.current.bonus" /></span>
+                            <strong>{licenseStatus.bonus_credits_remaining}</strong>
+                        </div>
+                    </div>
+
+                    <dl class="atg-detail-list">
+                        <div>
+                            <dt><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.current.boundSite" /></dt>
+                            <dd>{licenseStatus.site_host}</dd>
+                        </div>
+                        <div>
+                            <dt><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.current.periodEnd" /></dt>
+                            <dd>{licenseStatus.current_period_end_label}</dd>
+                        </div>
+                        <div>
+                            <dt><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.current.lastSynced" /></dt>
+                            <dd>{licenseStatus.last_synced_at_label}</dd>
+                        </div>
+                        <f:if condition="{licenseStatus.pending_cancellation}">
+                            <div>
+                                <dt><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.current.cancellation" /></dt>
+                                <dd><span class="atg-status atg-status--warning"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.current.cancellation.scheduled" /></span></dd>
+                            </div>
+                        </f:if>
+                        <f:if condition="{licenseStatus.canceled_at_label} != '-'">
+                            <div>
+                                <dt><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.current.canceledAt" /></dt>
+                                <dd>{licenseStatus.canceled_at_label}</dd>
+                            </div>
+                        </f:if>
+                        <div>
+                            <dt><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.current.subscriptionId" /></dt>
+                            <dd class="atg-mono">{licenseStatus.stripe_subscription_id}</dd>
+                        </div>
+                    </dl>
+                </f:then>
+                <f:else>
+                    <div class="atg-empty-state">
+                        <strong><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.current.notAvailable" /></strong>
+                        <p><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.current.emptyHint" /></p>
+                    </div>
+                </f:else>
+            </f:if>
+        </section>
+
+        <aside class="atg-panel atg-panel--side" aria-label="{f:translate(key: 'LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.sidePanel.label')}">
+            <f:if condition="{siteTrialStatus}">
+                <section class="atg-compact-section">
+                    <div class="atg-panel__header atg-panel__header--compact">
+                        <div>
+                            <p class="atg-section-label"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.section.included" /></p>
+                            <h2><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.freeUsage.title" /></h2>
+                        </div>
+                        <f:if condition="{siteTrialStatus.requires_subscription}">
+                            <span class="atg-status atg-status--danger">
+                                <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.freeUsage.required" />
+                            </span>
+                        </f:if>
+                    </div>
+                    <div class="atg-usage-row">
+                        <span><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.freeUsage.used" /></span>
+                        <strong>{siteTrialStatus.free_used} / {siteTrialStatus.free_quota_total}</strong>
+                    </div>
+                    <div class="atg-usage-row">
+                        <span><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.freeUsage.remaining" /></span>
+                        <strong>{siteTrialStatus.free_remaining}</strong>
+                    </div>
+                    <p class="atg-muted">
+                        <f:if condition="{siteTrialStatus.requires_subscription}">
+                            <f:then><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.freeUsage.exhaustedHint" /></f:then>
+                            <f:else><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.freeUsage.defaultHint" /></f:else>
+                        </f:if>
+                    </p>
+                </section>
+            </f:if>
+
+            <section class="atg-compact-section">
+                <div class="atg-panel__header atg-panel__header--compact">
+                    <div>
+                        <p class="atg-section-label"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.section.setup" /></p>
+                        <h2><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.license.title" /></h2>
+                    </div>
+                </div>
+
+                <f:if condition="{latestSiteLicense}">
+                    <f:then>
+                        <p class="atg-key-label"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.license.latest" /></p>
+                        <div class="atg-license-key atg-mono">{latestSiteLicense.license_key}</div>
+                        <div class="atg-inline-actions">
+                            <button
+                                type="button"
+                                class="atg-button atg-button--secondary js-copy-license-key"
+                                data-license-key="{latestSiteLicense.license_key}"
+                                data-copy-success="{f:translate(key: 'LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.license.copy.success')}"
+                                data-copy-failed="{f:translate(key: 'LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.license.copy.failed')}"
+                                data-copy-prompt="{f:translate(key: 'LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.license.copy.prompt')}"
+                            >
+                                <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.license.copyLatest" />
+                            </button>
+                            <span class="atg-copy-feedback js-copy-feedback" aria-live="polite"></span>
+                        </div>
+                    </f:then>
+                    <f:else>
+                        <p class="atg-muted"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.license.notFound" /></p>
+                    </f:else>
+                </f:if>
+
+                <p class="atg-key-label"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.license.configured" /></p>
+                <div class="atg-license-key atg-mono">
+                    <f:if condition="{configuredLicenseKey}">
+                        <f:then>{configuredLicenseKey}</f:then>
+                        <f:else>-</f:else>
+                    </f:if>
+                </div>
+                <p class="atg-muted"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.license.hint" /></p>
+            </section>
+        </aside>
+    </div>
+
+    <section class="atg-panel" aria-labelledby="atg-plan-title">
+        <div class="atg-panel__header">
+            <div>
+                <p class="atg-section-label"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.section.choose" /></p>
+                <h2 id="atg-plan-title"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.plans.title" /></h2>
+            </div>
+            <p class="atg-muted"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.plans.modeHint" /></p>
+        </div>
+
+        <div class="atg-plan-grid">
+            <f:for each="{plans}" as="plan">
+                <f:variable name="planCardClass" value="atg-plan-card" />
+                <f:if condition="{plan.is_current}">
+                    <f:variable name="planCardClass" value="{planCardClass} atg-plan-card--active" />
+                </f:if>
+
+                <article class="{planCardClass}">
+                    <div class="atg-plan-card__top">
+                        <div>
+                            <h3>{plan.name}</h3>
+                            <p>{plan.price_label}</p>
+                        </div>
+                        <f:if condition="{plan.is_current}">
+                            <span class="atg-plan-chip"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.plans.currentPlan" /></span>
+                        </f:if>
+                    </div>
+
+                    <div class="atg-plan-quota">
+                        <f:if condition="{plan.code} == 'topup20'">
+                            <f:then>
+                                <span><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.plans.oneTimeExtra" /></span>
+                            </f:then>
+                            <f:else>
+                                <span><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.plans.monthlyIncluded" /></span>
+                            </f:else>
+                        </f:if>
+                        <strong>{plan.monthly_included_usages}</strong>
+                    </div>
+
+                    <div class="atg-plan-card__action">
+                        <f:if condition="{hasSubscription}">
+                            <f:then>
+                                <f:if condition="{plan.code} == 'topup20'">
+                                    <f:then>
+                                        <f:if condition="{plan.payment_link_configured}">
+                                            <f:then>
+                                                <a class="atg-button atg-button--primary js-action-loading" href="{plan.buy_url}" data-loading-label="{f:translate(key: 'LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.action.processing')}">
+                                                    <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.plans.buyOnce" />
+                                                </a>
+                                            </f:then>
+                                            <f:else>
+                                                <button class="atg-button atg-button--disabled" type="button" disabled="disabled">
+                                                    <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.plans.notConfigured" />
+                                                </button>
+                                            </f:else>
+                                        </f:if>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{plan.is_current}">
+                                            <f:then>
+                                                <a class="atg-button atg-button--warning js-action-loading" href="{cancelSubscriptionUrl}" data-loading-label="{f:translate(key: 'LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.action.processing')}">
+                                                    <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.plans.cancelSubscription" />
+                                                </a>
+                                            </f:then>
+                                            <f:else>
+                                                <button class="atg-button atg-button--disabled" type="button" disabled="disabled" title="{f:translate(key: 'LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.plans.singleSubscriptionMode')}">
+                                                    <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.plans.unavailableWhileSubscribed" />
+                                                </button>
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{plan.payment_link_configured}">
+                                    <f:then>
+                                        <a class="atg-button atg-button--primary js-action-loading" href="{plan.buy_url}" data-loading-label="{f:translate(key: 'LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.action.processing')}">
+                                            <f:if condition="{plan.code} == 'topup20'">
+                                                <f:then><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.plans.buyOnce" /></f:then>
+                                                <f:else><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.plans.subscribe" /></f:else>
+                                            </f:if>
+                                        </a>
+                                    </f:then>
+                                    <f:else>
+                                        <button class="atg-button atg-button--disabled" type="button" disabled="disabled">
+                                            <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.plans.notConfigured" />
+                                        </button>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </div>
+                </article>
+            </f:for>
+        </div>
+
+        <div class="atg-contact-note">
+            <div>
+                <strong><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.customNeeds.title" /></strong>
+                <p><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.customNeeds.body" /></p>
+            </div>
+            <a class="atg-button atg-button--secondary" href="https://www.barrierefrei.space/abo" target="_blank" rel="noopener noreferrer">
+                <span aria-hidden="true">&#8599;</span>
+                <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.customNeeds.button" />
+            </a>
+        </div>
+    </section>
+
+    <f:if condition="{licenseStatus.timeline}">
+        <section class="atg-panel" aria-labelledby="atg-timeline-title">
+            <div class="atg-panel__header">
+                <div>
+                    <p class="atg-section-label"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.section.audit" /></p>
+                    <h2 id="atg-timeline-title"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.timeline.title" /></h2>
+                </div>
+            </div>
+            <div class="atg-timeline js-timeline" data-timeline-page-size="5">
+                <f:for each="{licenseStatus.timeline}" as="event">
+                    <div class="atg-timeline-item js-timeline-item">
+                        <strong>{event.status_label}</strong>
+                        <span>{event.message}</span>
+                        <time>{event.created_at_label} ({event.event_type})</time>
+                    </div>
+                </f:for>
+            </div>
+            <nav class="atg-timeline-pagination js-timeline-pagination" hidden="hidden" aria-label="{f:translate(key: 'LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.timeline.pagination')}">
+                <button class="atg-button atg-button--secondary js-timeline-prev" type="button">
+                    <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.timeline.previous" />
+                </button>
+                <span class="atg-timeline-page-status">
+                    <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.timeline.page" />
+                    <strong class="js-timeline-page-current">1</strong>
+                    /
+                    <strong class="js-timeline-page-total">1</strong>
+                </span>
+                <button class="atg-button atg-button--secondary js-timeline-next" type="button">
+                    <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.timeline.next" />
+                </button>
+            </nav>
+        </section>
+    </f:if>
+
+    <div class="atg-guide-shell js-guide-shell" hidden="hidden">
+        <div class="atg-guide-backdrop js-guide-close" aria-hidden="true"></div>
+        <section
+            class="atg-guide-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="atg-guide-title"
+            aria-describedby="atg-guide-description"
+        >
+            <button
+                class="atg-guide-close js-guide-close"
+                type="button"
+                aria-label="{f:translate(key: 'LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.close')}"
+            >
+                <span aria-hidden="true">&#215;</span>
+            </button>
+            <p class="atg-section-label"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.eyebrow" /></p>
+            <h2 id="atg-guide-title"><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.title" /></h2>
+            <p id="atg-guide-description" class="atg-guide-intro">
+                <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.intro" />
+            </p>
+
+            <div class="atg-guide-steps">
+                <article class="atg-guide-step js-guide-step">
+                    <span class="atg-guide-step__number">1</span>
+                    <div>
+                        <h3><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.step.site.title" /></h3>
+                        <p><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.step.site.body" /></p>
+                    </div>
+                </article>
+                <article class="atg-guide-step js-guide-step">
+                    <span class="atg-guide-step__number">2</span>
+                    <div>
+                        <h3><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.step.status.title" /></h3>
+                        <p><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.step.status.body" /></p>
+                    </div>
+                </article>
+                <article class="atg-guide-step js-guide-step">
+                    <span class="atg-guide-step__number">3</span>
+                    <div>
+                        <h3><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.step.license.title" /></h3>
+                        <p><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.step.license.body" /></p>
+                    </div>
+                </article>
+                <article class="atg-guide-step js-guide-step">
+                    <span class="atg-guide-step__number">4</span>
+                    <div>
+                        <h3><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.step.plans.title" /></h3>
+                        <p><f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.step.plans.body" /></p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="atg-guide-progress" aria-hidden="true">
+                <span class="js-guide-dot"></span>
+                <span class="js-guide-dot"></span>
+                <span class="js-guide-dot"></span>
+                <span class="js-guide-dot"></span>
+            </div>
+
+            <div class="atg-guide-footer">
+                <button class="atg-button atg-button--secondary js-guide-skip" type="button">
+                    <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.skip" />
+                </button>
+                <div class="atg-guide-navigation">
+                    <button class="atg-button atg-button--secondary js-guide-prev" type="button">
+                        <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.previous" />
+                    </button>
+                    <button class="atg-button atg-button--primary js-guide-next" type="button">
+                        <span class="js-guide-next-label">
+                            <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.next" />
+                        </span>
+                        <span class="js-guide-finish-label" hidden="hidden">
+                            <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:subscription.guide.finish" />
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+</f:section>
+</html>

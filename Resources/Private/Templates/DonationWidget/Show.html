@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:asset.css identifier="barrierefrei-space-donation-widget" href="EXT:barrierefrei_space/Resources/Public/Css/donation-widget.css" />
+<f:if condition="{payload}">
+    <f:variable name="currencySymbol">
+        <f:switch expression="{payload.currency}">
+            <f:case value="eur">€</f:case>
+            <f:case value="usd">$</f:case>
+            <f:case value="gbp">£</f:case>
+            <f:defaultCase></f:defaultCase>
+        </f:switch>
+    </f:variable>
+
+    <a
+        class="alt-text-gen-donation-widget {positionClass}"
+        href="https://www.barrierefrei.space/charity"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="{f:translate(key: 'LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:plugin.donationWidget.ariaLabel')}"
+    >
+        <span class="alt-text-gen-donation-widget__heart" aria-hidden="true"></span>
+        <span class="alt-text-gen-donation-widget__body">
+            <strong>{currencySymbol}<f:format.number decimals="2">{payload.donated_amount}</f:format.number></strong>
+            <span>
+                <f:translate key="LLL:EXT:barrierefrei_space/Resources/Private/Language/locallang.xlf:plugin.donationWidget.total" />
+            </span>
+        </span>
+        <span class="alt-text-gen-donation-widget__arrow" aria-hidden="true">›</span>
+    </a>
+</f:if>
+</html>

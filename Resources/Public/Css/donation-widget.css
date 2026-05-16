@@ -1,0 +1,179 @@
+.frame-type-barrierefreispace_donationwidget>header,
+.frame-type-barrierefreispace-donationwidget>header,
+.frame-type-barrierefrei_space_donationwidget>header,
+.frame-type-barrierefrei-space-donationwidget>header,
+.frame-type-barrierefreispace_donationwidget .ce-header,
+.frame-type-barrierefreispace-donationwidget .ce-header,
+.frame-type-barrierefrei_space_donationwidget .ce-header,
+.frame-type-barrierefrei-space-donationwidget .ce-header {
+    display: none;
+}
+
+.alt-text-gen-donation-widget {
+    --atg-donation-ink: #08213f;
+    --atg-donation-muted: #6d7a90;
+    --atg-donation-line: rgba(8, 33, 63, 0.1);
+    --atg-donation-heart-a: #ff6b6b;
+    --atg-donation-heart-b: #ff3f45;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid var(--atg-donation-line);
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(8, 33, 63, 0.1);
+    box-sizing: border-box;
+    color: var(--atg-donation-ink);
+    display: inline-grid;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    gap: 9px;
+    grid-template-columns: 29px minmax(0, auto) 9px;
+    letter-spacing: 0;
+    max-width: 180px;
+    min-height: 48px;
+    padding: 9px 10px;
+    text-decoration: none;
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.alt-text-gen-donation-widget:hover,
+.alt-text-gen-donation-widget:focus {
+    border-color: rgba(237, 117, 27, 0.26);
+    box-shadow: 0 14px 34px rgba(8, 33, 63, 0.13);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.alt-text-gen-donation-widget *,
+.alt-text-gen-donation-widget *::before,
+.alt-text-gen-donation-widget *::after {
+    box-sizing: border-box;
+}
+
+.alt-text-gen-donation-widget__heart {
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 42%),
+        linear-gradient(135deg, var(--atg-donation-heart-a), var(--atg-donation-heart-b));
+    display: block;
+    height: 17px;
+    margin-left: 7px;
+    transform: rotate(-45deg);
+    width: 17px;
+}
+
+.alt-text-gen-donation-widget__heart::before,
+.alt-text-gen-donation-widget__heart::after {
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 42%),
+        linear-gradient(135deg, var(--atg-donation-heart-a), var(--atg-donation-heart-b));
+    border-radius: 50%;
+    content: "";
+    height: 17px;
+    position: absolute;
+    width: 17px;
+}
+
+.alt-text-gen-donation-widget__heart::before {
+    left: 0;
+    top: -9px;
+}
+
+.alt-text-gen-donation-widget__heart::after {
+    left: 9px;
+    top: 0;
+}
+
+.alt-text-gen-donation-widget__body {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+    margin-left: 5px;
+    text-align: right;
+}
+
+.alt-text-gen-donation-widget__body strong {
+    color: var(--atg-donation-ink);
+    display: block;
+    font-size: 19px;
+    font-weight: 850;
+    line-height: 1;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.alt-text-gen-donation-widget__body span {
+    color: var(--atg-donation-muted);
+    display: block;
+    font-size: 10px;
+    font-weight: 520;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.alt-text-gen-donation-widget__arrow {
+    color: var(--atg-donation-muted);
+    font-size: 26px;
+    font-weight: 360;
+    line-height: 1;
+}
+
+.alt-text-gen-donation-widget--fixed-bottom-left,
+.alt-text-gen-donation-widget--fixed-bottom-right {
+    bottom: 20px;
+    max-width: min(180px, calc(100vw - 32px));
+    position: fixed;
+    z-index: 999;
+}
+
+.alt-text-gen-donation-widget--fixed-bottom-left {
+    left: 20px;
+}
+
+.alt-text-gen-donation-widget--fixed-bottom-right {
+    right: 20px;
+}
+
+@media (max-width: 420px) {
+    .alt-text-gen-donation-widget {
+        gap: 8px;
+        grid-template-columns: 26px minmax(0, 1fr) 9px;
+        min-height: 46px;
+        padding: 9px 10px;
+    }
+
+    .alt-text-gen-donation-widget__heart,
+    .alt-text-gen-donation-widget__heart::before,
+    .alt-text-gen-donation-widget__heart::after {
+        height: 16px;
+        width: 16px;
+    }
+
+    .alt-text-gen-donation-widget__heart {
+        margin-left: 7px;
+    }
+
+    .alt-text-gen-donation-widget__heart::before {
+        top: -8px;
+    }
+
+    .alt-text-gen-donation-widget__heart::after {
+        left: 8px;
+    }
+
+    .alt-text-gen-donation-widget__body strong {
+        font-size: 18px;
+    }
+
+    .alt-text-gen-donation-widget__body span {
+        font-size: 10px;
+    }
+
+    .alt-text-gen-donation-widget__arrow {
+        font-size: 24px;
+    }
+
+    .alt-text-gen-donation-widget--fixed-bottom-left,
+    .alt-text-gen-donation-widget--fixed-bottom-right {
+        bottom: 14px;
+        left: 14px;
+        right: 14px;
+    }
+}
