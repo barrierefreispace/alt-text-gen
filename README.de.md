@@ -116,7 +116,7 @@ CType:
 
 Das Widget zeigt ausschließlich den gesamten an gemeinnützige Zwecke gespendeten Betrag für das Site-Abonnement und verlinkt auf:
 
-https://www.barrierefrei.space/charity
+https://www.barrierefrei.space/#charity
 
 Der Betrag wird anhand des konfigurierten `licenseKey` und der ermittelten TYPO3-Site-URL vom Dienst geladen.
 

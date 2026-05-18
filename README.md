@@ -116,7 +116,7 @@ CType:
 
 The widget shows only the total amount donated to charity for this site's subscription and links to:
 
-https://www.barrierefrei.space/charity
+https://www.barrierefrei.space/en.html#charity
 
 The amount is fetched from the API using the configured `licenseKey` and the resolved TYPO3 Site URL.
 
